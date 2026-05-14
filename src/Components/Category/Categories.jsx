@@ -12,7 +12,7 @@ const Categories = () => {
             {
                 categories.map(category => (
                     <div className='grid grid-cols-1 '>
-                        <NavLink key={category.id} to={`/category/${category.id}`} className='py-4 px-12 text-[#9F9F9F] font-semibold hover:bg-base-300 hover:text-primary '>{category.name}</NavLink>
+                        <NavLink key={category.id} to={`/category/${category.id}`} className={({isActive}) => `py-4 px-12 text-[#9F9F9F] font-semibold hover:bg-base-300 hover:text-primary ${isActive ? 'bg-base-300' : ''}` }>{category.name}</NavLink>
                     </div>
                 ))
             }
