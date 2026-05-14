@@ -1,0 +1,22 @@
+.marquee {
+  overflow: hidden;
+  flex: 1;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 20px;
+  min-width: 100%;
+  animation: scroll 15s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
